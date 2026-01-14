@@ -565,9 +565,9 @@ document.addEventListener("DOMContentLoaded", () => {
           <span class="share-icon" aria-hidden="true">📘</span>
           <span class="tooltip-text">Share on Facebook</span>
         </button>
-        <button class="share-button share-twitter tooltip" data-activity="${escapeHtml(name)}" data-description="${escapeHtml(details.description)}" data-schedule="${escapeHtml(formattedSchedule)}" title="Share on Twitter" aria-label="Share on Twitter">
+        <button class="share-button share-twitter tooltip" data-activity="${escapeHtml(name)}" data-description="${escapeHtml(details.description)}" data-schedule="${escapeHtml(formattedSchedule)}" title="Share on X" aria-label="Share on X">
           <span class="share-icon" aria-hidden="true">🐦</span>
-          <span class="tooltip-text">Share on Twitter</span>
+          <span class="tooltip-text">Share on X</span>
         </button>
         <button class="share-button share-email tooltip" data-activity="${escapeHtml(name)}" data-description="${escapeHtml(details.description)}" data-schedule="${escapeHtml(formattedSchedule)}" title="Share via Email" aria-label="Share via Email">
           <span class="share-icon" aria-hidden="true">✉️</span>
@@ -844,7 +844,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
       window.open(facebookUrl, '_blank', 'width=600,height=400');
     } else if (button.classList.contains('share-twitter')) {
-      // Twitter share (using x.com for updated domain)
+      // X (formerly Twitter) share
       const twitterUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
       window.open(twitterUrl, '_blank', 'width=600,height=400');
     } else if (button.classList.contains('share-email')) {
