@@ -546,7 +546,7 @@ document.addEventListener("DOMContentLoaded", () => {
               ${
                 currentUser
                   ? `
-                <span class="delete-participant tooltip" data-activity="${name}" data-email="${email}">
+                <span class="delete-participant tooltip" data-activity="${escapeHtml(name)}" data-email="${escapeHtml(email)}">
                   ✖
                   <span class="tooltip-text">Unregister this student</span>
                 </span>
@@ -561,16 +561,16 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
       <div class="share-buttons">
         <span class="share-label">Share:</span>
-        <button class="share-button share-facebook tooltip" data-activity="${escapeHtml(name)}" data-description="${escapeHtml(details.description)}" data-schedule="${escapeHtml(formattedSchedule)}" title="Share on Facebook">
-          <span class="share-icon">📘</span>
+        <button class="share-button share-facebook tooltip" data-activity="${escapeHtml(name)}" data-description="${escapeHtml(details.description)}" data-schedule="${escapeHtml(formattedSchedule)}" title="Share on Facebook" aria-label="Share on Facebook">
+          <span class="share-icon" aria-hidden="true">📘</span>
           <span class="tooltip-text">Share on Facebook</span>
         </button>
-        <button class="share-button share-twitter tooltip" data-activity="${escapeHtml(name)}" data-description="${escapeHtml(details.description)}" data-schedule="${escapeHtml(formattedSchedule)}" title="Share on Twitter">
-          <span class="share-icon">🐦</span>
+        <button class="share-button share-twitter tooltip" data-activity="${escapeHtml(name)}" data-description="${escapeHtml(details.description)}" data-schedule="${escapeHtml(formattedSchedule)}" title="Share on Twitter" aria-label="Share on Twitter">
+          <span class="share-icon" aria-hidden="true">🐦</span>
           <span class="tooltip-text">Share on Twitter</span>
         </button>
-        <button class="share-button share-email tooltip" data-activity="${escapeHtml(name)}" data-description="${escapeHtml(details.description)}" data-schedule="${escapeHtml(formattedSchedule)}" title="Share via Email">
-          <span class="share-icon">✉️</span>
+        <button class="share-button share-email tooltip" data-activity="${escapeHtml(name)}" data-description="${escapeHtml(details.description)}" data-schedule="${escapeHtml(formattedSchedule)}" title="Share via Email" aria-label="Share via Email">
+          <span class="share-icon" aria-hidden="true">✉️</span>
           <span class="tooltip-text">Share via Email</span>
         </button>
       </div>
