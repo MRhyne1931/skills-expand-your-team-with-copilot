@@ -726,10 +726,3 @@ footer {
 #theme-toggle:active {
   transform: scale(0.95);
 }
-
-/* Adjust user controls position when theme toggle is present */
-#user-controls {
-  position: absolute;
-  top: 10px;
-  right: 55px;
-}
